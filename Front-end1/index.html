@@ -1,23 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Desafio 1 imply</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Validação de E-mail</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <h1>HomePage</h1>
-    <p>Olá, tudo bem?</p>
-    <button>
-        <input type="button" value="Clique aqui" onclick="alert('Olá, tudo bem?')">
-    </button>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="sobre.html">Sobre</a></li>
-            <li><a href="contato.html">Contato</a></li>
-        </ul>
-    </nav>
-    
+  <main class="content">
+    <button id="openPopupBtn">Validar E-mail</button>
+    <ul id="emailHistory"></ul>
+  </main>
+
+  <div id="popupOverlay" class="overlay hidden" tabindex="-1">
+    <div class="popup" role="dialog" aria-modal="true">
+      <button id="closePopupBtn" aria-label="Fechar popup">&times;</button>
+      <h2>Digite seu e-mail</h2>
+      <input type="email" id="emailInput" placeholder="exemplo@dominio.com" />
+      <span id="emailFeedback"></span>
+      <button id="submitEmailBtn">Validar</button>
+      <p id="resultMsg"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
