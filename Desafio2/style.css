@@ -1,0 +1,116 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: sans-serif;
+    transition: background 0.3s ease, color 0.3s ease;
+    background: var(--bg);
+    color: var(--text);
+  }
+  
+  /* Temas */
+  :root {
+    --bg: #ffffff;
+    --text: #111111;
+    --header-bg: #f0f0f0;
+    --footer-bg: #f8f8f8;
+  }
+  
+  body.dark {
+    --bg: #121212;
+    --text: #f0f0f0;
+    --header-bg: #1e1e1e;
+    --footer-bg: #1a1a1a;
+  }
+  
+  /* Cabeçalho */
+  header {
+    background: var(--header-bg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .logo {
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+  
+  nav ul {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: var(--text);
+    font-weight: 500;
+  }
+  
+  #menu-toggle,
+  #toggle-tema {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--text);
+  }
+  
+  /* Seções */
+  main {
+    padding: 2rem;
+  }
+  
+  section {
+    margin-bottom: 3rem;
+  }
+  
+  h1, h2 {
+    margin-bottom: 1rem;
+  }
+  
+  p {
+    line-height: 1.6;
+  }
+  
+  /* Rodapé */
+  footer {
+    background: var(--footer-bg);
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+  }
+  
+  /* Responsivo: menu mobile */
+  @media (max-width: 768px) {
+    nav ul {
+      position: absolute;
+      top: 60px;
+      right: 0;
+      background: var(--header-bg);
+      flex-direction: column;
+      width: 200px;
+      display: none;
+      padding: 1rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+  
+    nav ul.show {
+      display: flex;
+    }
+  
+    #menu-toggle {
+      display: block;
+    }
+  }
+  
