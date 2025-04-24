@@ -90,6 +90,9 @@ function renderHistory() {
   if (emails.length > 0) {
     const clearBtn = document.createElement('button');
     clearBtn.textContent = 'Limpar tudo';
+
+    clearBtn.classList.add('btn-clear');
+
     clearBtn.onclick = () => {
       localStorage.removeItem('emails');
       renderHistory();
