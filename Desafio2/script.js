@@ -7,11 +7,13 @@
     body.classList.add('dark');
   }
 
+
   toggleTema.addEventListener('click', () => {
     body.classList.toggle('dark');
     const temaAtual = body.classList.contains('dark') ? 'dark' : 'light';
     localStorage.setItem('tema', temaAtual);
   });
+
 
   const menuToggle = document.getElementById('menu-toggle');
   const menu = document.querySelector('nav ul');
@@ -25,4 +27,9 @@
       menu.classList.remove('show');
     });
   });
+
+  const form = document.getElementById('form');
+  const nomeInput = document.getElementById('nome');
+  const emailInput = document.getElementById('email');
+  const mensagemInput = document.getElementById('mensagem');
 
